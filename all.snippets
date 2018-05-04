@@ -1,0 +1,25 @@
+snippet snip "snippet" b
+`!p snip.rv = "snippet"` ${1} "${2}"${3}
+${4}
+`!p snip.rv = "endsnippet"`${5}
+endsnippet
+
+snippet ( "parens" i
+(${1}${VISUAL})
+endsnippet
+
+snippet { "parens" i
+{ ${1}${VISUAL} }
+endsnippet
+
+snippet [ "square brackets" i
+[${1}${VISUAL}]
+endsnippet
+
+snippet " "double quotes" i
+"${1}${VISUAL}"${2}
+endsnippet
+
+snippet ' "quotes" i
+'${1}${VISUAL}'${2}
+endsnippet
