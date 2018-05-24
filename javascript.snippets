@@ -1,15 +1,35 @@
 snippet fun "function" i
-function(${1}) {
-	${2}${VISUAL}
-}${3}
+function${1}(${2}) {
+	${3}${VISUAL}
+}${4}
+endsnippet
+
+snippet fn "function" i
+function${1}(${2}) {
+	${3}${VISUAL}
+}${4}
 endsnippet
 
 snippet cl "console log" b
 console.log(${1}${VISUAL})${2}
 endsnippet
 
-snippet if "if" i
+snippet if "if" w
 if (${1}) {
 	${2}${VISUAL}
 }${3}
+endsnippet
+
+snippet iif "inline if"
+if (${1}) ${2}
+endsnippet
+
+snippet var "var" i
+var ${1} = ${2};${3}
+endsnippet
+
+snippet for "for loop"
+for(${1}; ${2}; $1++) {
+	${4}
+}${5}
 endsnippet
