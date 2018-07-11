@@ -1,5 +1,47 @@
 snippet def "def" b
 def ${1}
-	${2}
+	${2}${VISUAL}
+end${3}
+endsnippet
+
+snippet desc "describe block"
+describe '${1}' do
+	${2}${VISUAL}
+end${3}
+endsnippet
+
+snippet it "it block"
+it '${1}' do
+	${2}${VISUAL}
+end${3}
+endsnippet
+
+snippet iit "inline it"
+it { ${1}${VISUAL} }${2}
+endsnippet
+
+snippet before "before block"
+before do
+	${1}${VISUAL}
+end${2}
+endsnippet
+
+snippet ibefore "inline before block"
+before { ${1}${VISUAL} }${2}
+endsnippet
+
+snippet do "do block"
+do${1}
+	${2}${VISUAL}
+end${3}
+endsnippet
+
+snippet ilet "inline let block"
+let(:${1}) { ${2}${VISUAL} }${3}
+endsnippet
+
+snippet let "let block"
+let(:${1}) do
+	${2}${VISUAL}
 end${3}
 endsnippet

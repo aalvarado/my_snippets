@@ -33,3 +33,15 @@ for(${1}; ${2}; $1++) {
 	${4}
 }${5}
 endsnippet
+
+snippet desc "describe block"
+describe('${1}', () => {
+	${2}${VISUAL}
+})${3}
+endsnippet
+
+snippet it "it block"
+it('${1}', () => {
+	${2}${VISUAL}
+})${3}
+endsnippet
