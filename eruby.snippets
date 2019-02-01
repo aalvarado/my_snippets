@@ -1,0 +1,43 @@
+snippet d "div"
+<div${1}>
+	${2}${VISUAL}
+</div>${3}
+endsnippet
+
+snippet c= "css class"
+class="${1}"
+endsnippet
+
+snippet i= "css class"
+id="${1}"
+endsnippet
+
+snippet = "ruby output"
+<%= ${VISUAL}${1} %>
+endsnippet
+
+snippet % "ruby expansion"
+<% ${VISUAL}${1} %>
+endsnippet
+
+snippet end "<% end %>"
+<% end %>
+endsnippet
+
+snippet li "<li> tag"
+<li>
+	${1}
+</li>${2}
+endsnippet
+
+snippet if "if"
+<% if ${1} %>
+	${VISUAL}${2}
+<% end %>${3}
+endsnippet
+
+snippet unless "unless"
+<% unless ${1} %>
+	${VISUAL}${2}
+<% end %>${3}
+endsnippet
