@@ -1,3 +1,10 @@
 snippet b.p "binding.pry"
 binding.pry
 endsnippet
+
+snippet task "rake task"
+desc '${1}'
+task ${2}: :environment do
+	${VISUAL}${3}
+end$0
+endsnippet

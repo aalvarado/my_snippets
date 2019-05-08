@@ -1,7 +1,13 @@
 snippet d "div"
 <div${1}>
 	${2}${VISUAL}
-</div>${3}
+</div>$0
+endsnippet
+
+snippet dc "div"
+<div class="${1}">
+	${2}${VISUAL}
+</div>$0
 endsnippet
 
 snippet c= "css class"
@@ -40,4 +46,30 @@ snippet unless "unless"
 <% unless ${1} %>
 	${VISUAL}${2}
 <% end %>${3}
+endsnippet
+
+snippet script "script tag"
+<script>
+	${VISUAL}${1}
+</script>
+endsnippet
+
+snippet each "each"
+<% ${1}.each do |${2}| %>
+	${VISUAL}$0
+<% end %>
+endsnippet
+
+snippet cf "content_for"
+<% content_for(:${1}) do %>
+	${VISUAL}${2}
+<% end %>
+endsnippet
+
+snippet render "render"
+<%= render ${1} %>
+endsnippet
+
+snippet <% "eruby tag" A
+<%${1} %>
 endsnippet
