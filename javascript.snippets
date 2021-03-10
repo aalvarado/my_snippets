@@ -13,7 +13,7 @@ if (${1}) ${2}
 endsnippet
 
 snippet var "var" i
-var ${1} = ${2};${3}
+var ${1} = ${2};$0
 endsnippet
 
 snippet for "for loop"
@@ -58,6 +58,12 @@ endsnippet
 
 snippet af "arrow-function"
 (${1}) => $0
+endsnippet
+
+snippet	mf "make function"
+const ${1} = (${2}) => {
+	${VISUAL}$0
+}
 endsnippet
 
 snippet "<((\w+).*)>" "Generic Tag" r
