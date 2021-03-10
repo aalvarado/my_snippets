@@ -1,9 +1,3 @@
-snippet def "def" b
-def ${1}
-	${2}${VISUAL}
-end${3}
-endsnippet
-
 snippet desc "describe block"
 describe '${1}' do
 	${2}${VISUAL}
@@ -33,7 +27,13 @@ endsnippet
 snippet do "do block"
 do${1}
 	${2}${VISUAL}
-end${3}
+end$0
+endsnippet
+
+snippet def "def"
+def ${1}
+	${VISUAL}${2}
+end$0
 endsnippet
 
 snippet ilet "inline let block"
@@ -72,4 +72,21 @@ snippet init "initialize"
 def initialize${1}
 	${VISUAL}$0
 end
+endsnippet
+
+snippet begin "begin block"
+begin
+	${VISUAL}$0
+end
+endsnippet
+
+snippet rescue "rescue statement"
+rescue ${1:StandardError}
+	${VISUAL}$0
+endsnippet
+
+snippet if "if"
+if ${1}
+	${VISUAL}$2
+end$0
 endsnippet
