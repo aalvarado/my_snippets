@@ -6,7 +6,7 @@ endsnippet
 
 snippet it "it block"
 it '${1}' do
-	${2}${VISUAL}
+	${VISUAL}${2}
 end${3}
 endsnippet
 
@@ -24,10 +24,10 @@ snippet ibefore "inline before block"
 before { ${1}${VISUAL} }${2}
 endsnippet
 
-snippet do "do block"
+snippet do "do block" ims
 do${1}
-	${2}${VISUAL}
-end$0
+	${VISUAL}$0
+end
 endsnippet
 
 snippet def "def"
@@ -58,7 +58,7 @@ endsnippet
 
 snippet class "class"
 class ${1}
-	$0${VISUAL}
+	${VISUAL}$0
 end
 endsnippet
 
@@ -88,5 +88,22 @@ endsnippet
 snippet if "if"
 if ${1}
 	${VISUAL}$2
+end$0
+endsnippet
+
+snippet ll "live_loop :)"
+live_loop :${1} do
+	${VISUAL}${2}
+end$0
+endsnippet
+
+snippet bp "binding.pry"
+binding.pry$0
+endsnippet
+
+snippet raketask "rake task"
+desc '${1}'
+task ${2}: :environment do
+	${VISUAL}${3}
 end$0
 endsnippet

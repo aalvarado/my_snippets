@@ -1,9 +1,9 @@
 snippet c= "css class"
-class="${1}"
+class="${1}"$0
 endsnippet
 
 snippet i= "css class"
-id="${1}"
+id="${1}"$0
 endsnippet
 
 snippet p "paragraph" 
@@ -14,29 +14,29 @@ endsnippet
 
 snippet d "div"
 <div>
-	${VISUAL}${1}
+	${VISUAL}$0
 </div>
 endsnippet
 
 snippet di "div"
 <div id="${1}">
-	${VISUAL}${2}
+	${VISUAL}$0
 </div>
 endsnippet
 
 snippet dc "div"
 <div class="${1}">
-	${VISUAL}${2}
+	${VISUAL}$0
 </div>
 endsnippet
 
 snippet li "<li> tag"
 <li>
-	${1}
-</li>${2}
+	${VISUAL}${1}
+</li>$0
 endsnippet
 
-snippet html5 "html5 template"
+snippet html "html template"
 <!doctype html>
 <html>
 	<head>
@@ -47,7 +47,7 @@ snippet html5 "html5 template"
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
-		$0
+		${VISUAL}$0
 	</body>
 </html>
 endsnippet
@@ -57,17 +57,17 @@ snippet script "script"
 endsnippet
 
 snippet link "link stylsheet"
-<link rel="stylesheet" href="${1}" />
+<link rel="stylesheet" href="${1}" />$0
 endsnippet
 
 snippet iscript "inline script"
 <script>
-	${VISUAL}${0}
+	${VISUAL}$0
 </script>
 endsnippet
 
-snippet "<([\w\.]+)" "html tag" br
-<`!p snip.rv = match.group(1)`${1}>
-	${VISUAL}${2}
-</`!p snip.rv = match.group(1)`>${3}
+snippet "<((\w+).*)>" "Generic Tag" r
+<`!p snip.rv = match.group(1)`>
+	${VISUAL}$0
+</`!p snip.rv = match.group(2)`>
 endsnippet

@@ -1,3 +1,9 @@
+snippet clb "console log box"
+console.log('-----------');
+console.log(${VISUAL}${1});$0
+console.log('-----------');
+endsnippet
+
 snippet cl "console log" b
 console.log(${1}${VISUAL});$0
 endsnippet
@@ -49,7 +55,8 @@ endsnippet
 
 snippet case "case"
 case ${1}:
-	$0
+	${0:${VISUAL}}
+	break;
 endsnippet
 
 snippet fun "function"
@@ -82,12 +89,40 @@ endsnippet
 
 snippet try "try"
 try {
-	${VISUAL}${2}
-}$0
+	${0:${VISUAL}}
+} catch (${1}) {
+	${2:/* handle error */}
+}
 endsnippet
 
 snippet catch ""
 catch {
 	${VISUAL}${2}
 }$0
+endsnippet
+
+snippet while "(condition) { ... }"
+	while (${1:/* condition */}) {
+		${0:${VISUAL}}
+	}
+endsnippet
+
+snippet import "import"
+import ${1} from '${2}';$0
+endsnippet
+
+snippet imp "import"
+import ${1} from '${2}';$0
+endsnippet
+
+snippet test "test"
+test('${1}', () => {
+	${VISUAL}${2}
+});
+endsnippet
+
+snippet impt "import test"
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { MockedProvider } from '@apollo/react-testing';
 endsnippet
