@@ -6,23 +6,35 @@ snippet \#! "hashbang"
 #!/usr/bin/env bash
 endsnippet
 
-snippet { "Curly braces" i
+snippet !{! "Curly braces" r
+{${VISUAL}$1}$0
+endsnippet
+
+snippet !{ ! "Curly braces w space" r
 { ${VISUAL}$1 }$0
 endsnippet
 
-snippet ' "single quote" iw
+snippet !'! "single quote" r
 '${VISUAL}$1'$0
 endsnippet
 
-snippet " "double quotes" iw
+snippet !"! "double quotes" r
 "${VISUAL}$1"$0
+endsnippet
+
+snippet !`! "angled quotes" rw
+\`${1:${VISUAL}}\`$0
 endsnippet
 
 snippet ( "parens" i
 (${VISUAL}$1)$0
 endsnippet
 
-snippet [ "square brackets" i
+snippet '\[' "square brackets" r
+[${VISUAL}$1]$0
+endsnippet
+
+snippet '\[ ' "square brackets w space" r
 [ ${VISUAL}$1 ]$0
 endsnippet
 

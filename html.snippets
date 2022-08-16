@@ -68,6 +68,6 @@ endsnippet
 
 snippet "<((\w+).*)>" "Generic Tag" r
 <`!p snip.rv = match.group(1)`>
-	${VISUAL}$0
-</`!p snip.rv = match.group(2)`>
+	${VISUAL}${1}
+</`!p snip.rv = match.group(2)`>$0
 endsnippet
