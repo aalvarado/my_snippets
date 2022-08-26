@@ -1,11 +1,11 @@
 snippet clb "console log box"
-console.log('-----------');
-console.log(${VISUAL}${1});$0
-console.log('-----------');
+console.log('-----------')
+console.log(${VISUAL}${1})$0
+console.log('-----------')
 endsnippet
 
 snippet cl "console log" b
-console.log(${1}${VISUAL});$0
+console.log(${1}${VISUAL})$0
 endsnippet
 
 snippet if "if" w
@@ -31,19 +31,19 @@ endsnippet
 snippet desc "describe block"
 describe('${1}', () => {
 	${VISUAL}${2}
-});$0
+})$0
 endsnippet
 
 snippet it "it block"
 it('${1}', () => {
 	${VISUAL}${2}
-});$0
+})$0
 endsnippet
 
 snippet before "before block"
 before(() => {
 	${VISUAL}${1}
-});$0
+})$0
 endsnippet
 
 snippet switch "switch case"
@@ -56,7 +56,7 @@ endsnippet
 snippet case "case"
 case ${1}:
 	${0:${VISUAL}}
-	break;
+	break
 endsnippet
 
 snippet fun "function"
@@ -102,27 +102,27 @@ catch {
 endsnippet
 
 snippet while "(condition) { ... }"
-	while (${1:/* condition */}) {
+	while (${1}) {
 		${0:${VISUAL}}
 	}
 endsnippet
 
 snippet import "import"
-import ${1} from '${2}';$0
+import ${1} from '${2}'$0
 endsnippet
 
 snippet imp "import"
-import ${1} from '${2}';$0
+import ${1} from '${2}'$0
 endsnippet
 
 snippet test "test"
 test('${1}', () => {
 	${VISUAL}${2}
-});
+})
 endsnippet
 
 snippet impt "import test"
-import React from 'react';
-import renderer from 'react-test-renderer';
-import { MockedProvider } from '@apollo/react-testing';
+import React from 'react'
+import renderer from 'react-test-renderer'
+import { MockedProvider } from '@apollo/react-testing'
 endsnippet

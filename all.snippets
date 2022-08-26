@@ -22,7 +22,13 @@ snippet !"! "double quotes" r
 "${VISUAL}$1"$0
 endsnippet
 
-snippet !`! "angled quotes" rw
+snippet ``` "tripple angled quotes"
+\`\`\`${1}
+${VISUAL}${2}
+\`\`\`$0
+endsnippet
+
+snippet !(?<!`)`! "angled quotes" r
 \`${1:${VISUAL}}\`$0
 endsnippet
 
@@ -38,14 +44,18 @@ snippet '\[ ' "square brackets w space" r
 [ ${VISUAL}$1 ]$0
 endsnippet
 
-snippet ''' "tripple quotes" bw
+snippet !'''! "tripple quotes" bw
 '''$1
 	${VISUAL}$2
 '''$0
 endsnippet
 
-snippet """ "tripple double quotes"
+snippet !"""! "tripple double quotes"
 """$1
 	${VISUAL}$2
 """
+endsnippet
+
+snippet today "Today's date"
+`date +%F`
 endsnippet

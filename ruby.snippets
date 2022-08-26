@@ -57,8 +57,8 @@ puts "-------------------"
 endsnippet
 
 snippet class "class"
-class ${1}
-	${VISUAL}$0
+class ${1:`!p snip.rv = re.sub('_', '', snip.basename.title())`}
+	${2:${VISUAL}}$0
 end
 endsnippet
 
