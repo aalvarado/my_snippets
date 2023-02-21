@@ -7,3 +7,7 @@ endsnippet
 snippet vis "${VISUAL}" i
 \${VISUAL}$0
 endsnippet
+
+snippet !([1-5])! "digit" r
+\${`!p snip.rv = match.group(1)`${1}}$0
+endsnippet
